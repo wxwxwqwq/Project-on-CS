@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://wxwx.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://wxwx.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://wxwx.org/">
+      <s:element name="Registration">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="first_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="last_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="role" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegistrationResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Authorization">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthorizationResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Select">
+        <s:complexType />
+      </s:element>
+      <s:element name="SelectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUserResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteAdmin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAdminResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SelectAdmins">
+        <s:complexType />
+      </s:element>
+      <s:element name="SelectAdminsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectAdminsResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertWarehouse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="capacity" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertWarehouseResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SelectWarehouses">
+        <s:complexType />
+      </s:element>
+      <s:element name="SelectWarehousesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectWarehousesResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteWarehouse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteWarehouseResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddInWarehouse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddInWarehouseResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DelInWarehouse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelInWarehouseResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="InsertParcel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="warehouse" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertParcelResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SelectParcels">
+        <s:complexType />
+      </s:element>
+      <s:element name="SelectParcelsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectParcelsResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectUserParcels">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectUserParcelsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectUserParcelsResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteParcel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteParcelResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="InsertLink">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="passport" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="number" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertLinkResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SelectLink">
+        <s:complexType />
+      </s:element>
+      <s:element name="SelectLinkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectLinkResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteLink">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteLinkResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RegistrationSoapIn">
+    <wsdl:part name="parameters" element="tns:Registration" />
+  </wsdl:message>
+  <wsdl:message name="RegistrationSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizationSoapIn">
+    <wsdl:part name="parameters" element="tns:Authorization" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizationSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthorizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectSoapIn">
+    <wsdl:part name="parameters" element="tns:Select" />
+  </wsdl:message>
+  <wsdl:message name="SelectSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAdminSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteAdmin" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAdminSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectAdminsSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectAdmins" />
+  </wsdl:message>
+  <wsdl:message name="SelectAdminsSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectAdminsResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertWarehouseSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertWarehouse" />
+  </wsdl:message>
+  <wsdl:message name="InsertWarehouseSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertWarehouseResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectWarehousesSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectWarehouses" />
+  </wsdl:message>
+  <wsdl:message name="SelectWarehousesSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectWarehousesResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteWarehouseSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteWarehouse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteWarehouseSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteWarehouseResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddInWarehouseSoapIn">
+    <wsdl:part name="parameters" element="tns:AddInWarehouse" />
+  </wsdl:message>
+  <wsdl:message name="AddInWarehouseSoapOut">
+    <wsdl:part name="parameters" element="tns:AddInWarehouseResponse" />
+  </wsdl:message>
+  <wsdl:message name="DelInWarehouseSoapIn">
+    <wsdl:part name="parameters" element="tns:DelInWarehouse" />
+  </wsdl:message>
+  <wsdl:message name="DelInWarehouseSoapOut">
+    <wsdl:part name="parameters" element="tns:DelInWarehouseResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertParcelSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertParcel" />
+  </wsdl:message>
+  <wsdl:message name="InsertParcelSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertParcelResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectParcelsSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectParcels" />
+  </wsdl:message>
+  <wsdl:message name="SelectParcelsSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectParcelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectUserParcelsSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectUserParcels" />
+  </wsdl:message>
+  <wsdl:message name="SelectUserParcelsSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectUserParcelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteParcelSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteParcel" />
+  </wsdl:message>
+  <wsdl:message name="DeleteParcelSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteParcelResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertLinkSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertLink" />
+  </wsdl:message>
+  <wsdl:message name="InsertLinkSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertLinkResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectLinkSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectLink" />
+  </wsdl:message>
+  <wsdl:message name="SelectLinkSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectLinkResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLinkSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteLink" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLinkSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteLinkResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService1Soap">
+    <wsdl:operation name="Registration">
+      <wsdl:input message="tns:RegistrationSoapIn" />
+      <wsdl:output message="tns:RegistrationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Authorization">
+      <wsdl:input message="tns:AuthorizationSoapIn" />
+      <wsdl:output message="tns:AuthorizationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select">
+      <wsdl:input message="tns:SelectSoapIn" />
+      <wsdl:output message="tns:SelectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input message="tns:UpdateUserSoapIn" />
+      <wsdl:output message="tns:UpdateUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAdmin">
+      <wsdl:input message="tns:DeleteAdminSoapIn" />
+      <wsdl:output message="tns:DeleteAdminSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAdmins">
+      <wsdl:input message="tns:SelectAdminsSoapIn" />
+      <wsdl:output message="tns:SelectAdminsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertWarehouse">
+      <wsdl:input message="tns:InsertWarehouseSoapIn" />
+      <wsdl:output message="tns:InsertWarehouseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectWarehouses">
+      <wsdl:input message="tns:SelectWarehousesSoapIn" />
+      <wsdl:output message="tns:SelectWarehousesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWarehouse">
+      <wsdl:input message="tns:DeleteWarehouseSoapIn" />
+      <wsdl:output message="tns:DeleteWarehouseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddInWarehouse">
+      <wsdl:input message="tns:AddInWarehouseSoapIn" />
+      <wsdl:output message="tns:AddInWarehouseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DelInWarehouse">
+      <wsdl:input message="tns:DelInWarehouseSoapIn" />
+      <wsdl:output message="tns:DelInWarehouseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertParcel">
+      <wsdl:input message="tns:InsertParcelSoapIn" />
+      <wsdl:output message="tns:InsertParcelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectParcels">
+      <wsdl:input message="tns:SelectParcelsSoapIn" />
+      <wsdl:output message="tns:SelectParcelsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectUserParcels">
+      <wsdl:input message="tns:SelectUserParcelsSoapIn" />
+      <wsdl:output message="tns:SelectUserParcelsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteParcel">
+      <wsdl:input message="tns:DeleteParcelSoapIn" />
+      <wsdl:output message="tns:DeleteParcelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertLink">
+      <wsdl:input message="tns:InsertLinkSoapIn" />
+      <wsdl:output message="tns:InsertLinkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectLink">
+      <wsdl:input message="tns:SelectLinkSoapIn" />
+      <wsdl:output message="tns:SelectLinkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLink">
+      <wsdl:input message="tns:DeleteLinkSoapIn" />
+      <wsdl:output message="tns:DeleteLinkSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Registration">
+      <soap:operation soapAction="http://wxwx.org/Registration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authorization">
+      <soap:operation soapAction="http://wxwx.org/Authorization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select">
+      <soap:operation soapAction="http://wxwx.org/Select" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://wxwx.org/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAdmin">
+      <soap:operation soapAction="http://wxwx.org/DeleteAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAdmins">
+      <soap:operation soapAction="http://wxwx.org/SelectAdmins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertWarehouse">
+      <soap:operation soapAction="http://wxwx.org/InsertWarehouse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectWarehouses">
+      <soap:operation soapAction="http://wxwx.org/SelectWarehouses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWarehouse">
+      <soap:operation soapAction="http://wxwx.org/DeleteWarehouse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddInWarehouse">
+      <soap:operation soapAction="http://wxwx.org/AddInWarehouse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelInWarehouse">
+      <soap:operation soapAction="http://wxwx.org/DelInWarehouse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertParcel">
+      <soap:operation soapAction="http://wxwx.org/InsertParcel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectParcels">
+      <soap:operation soapAction="http://wxwx.org/SelectParcels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUserParcels">
+      <soap:operation soapAction="http://wxwx.org/SelectUserParcels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteParcel">
+      <soap:operation soapAction="http://wxwx.org/DeleteParcel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertLink">
+      <soap:operation soapAction="http://wxwx.org/InsertLink" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectLink">
+      <soap:operation soapAction="http://wxwx.org/SelectLink" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLink">
+      <soap:operation soapAction="http://wxwx.org/DeleteLink" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Registration">
+      <soap12:operation soapAction="http://wxwx.org/Registration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authorization">
+      <soap12:operation soapAction="http://wxwx.org/Authorization" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select">
+      <soap12:operation soapAction="http://wxwx.org/Select" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap12:operation soapAction="http://wxwx.org/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAdmin">
+      <soap12:operation soapAction="http://wxwx.org/DeleteAdmin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAdmins">
+      <soap12:operation soapAction="http://wxwx.org/SelectAdmins" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertWarehouse">
+      <soap12:operation soapAction="http://wxwx.org/InsertWarehouse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectWarehouses">
+      <soap12:operation soapAction="http://wxwx.org/SelectWarehouses" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWarehouse">
+      <soap12:operation soapAction="http://wxwx.org/DeleteWarehouse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddInWarehouse">
+      <soap12:operation soapAction="http://wxwx.org/AddInWarehouse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelInWarehouse">
+      <soap12:operation soapAction="http://wxwx.org/DelInWarehouse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertParcel">
+      <soap12:operation soapAction="http://wxwx.org/InsertParcel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectParcels">
+      <soap12:operation soapAction="http://wxwx.org/SelectParcels" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUserParcels">
+      <soap12:operation soapAction="http://wxwx.org/SelectUserParcels" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteParcel">
+      <soap12:operation soapAction="http://wxwx.org/DeleteParcel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertLink">
+      <soap12:operation soapAction="http://wxwx.org/InsertLink" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectLink">
+      <soap12:operation soapAction="http://wxwx.org/SelectLink" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLink">
+      <soap12:operation soapAction="http://wxwx.org/DeleteLink" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService1">
+    <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
+      <soap:address location="http://localhost:51635/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
+      <soap12:address location="http://localhost:51635/WebService1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

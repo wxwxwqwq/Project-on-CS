@@ -1,0 +1,63 @@
+C:\Users\GaRiS\source\repos\ASP.NET MVC\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\GaRiS\source\repos\ASP.NET MVC\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\GaRiS\source\repos\ASP.NET MVC\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\GaRiS\source\repos\ASP.NET MVC\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\GaRiS\source\repos\ASP.NET MVC\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\GaRiS\source\repos\ASP.NET MVC\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\GaRiS\source\repos\ASP.NET MVC\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\GaRiS\source\repos\ASP.NET MVC\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\GaRiS\source\repos\ASP.NET MVC\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\GaRiS\source\repos\ASP.NET MVC\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\GaRiS\source\repos\ASP.NET MVC\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Registration.resources
+C:\Users\GaRiS\source\repos\ASP.NET MVC\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Authorization.resources
+C:\Users\GaRiS\Desktop\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\GaRiS\Desktop\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\GaRiS\Desktop\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\GaRiS\Desktop\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\GaRiS\Desktop\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Authorization.resources
+C:\Users\GaRiS\Desktop\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\GaRiS\Desktop\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\GaRiS\Desktop\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Registration.resources
+C:\Users\GaRiS\Desktop\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\GaRiS\Desktop\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\GaRiS\Desktop\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\GaRiS\Desktop\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\GaRiS\source\repos\Клиент\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\GaRiS\source\repos\Клиент\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\GaRiS\source\repos\Клиент\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\GaRiS\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Authorization.resources
+C:\Users\GaRiS\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\GaRiS\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Registration.resources
+C:\Users\GaRiS\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\GaRiS\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\GaRiS\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\GaRiS\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\GaRiS\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MainMenuForAdmins.resources
+C:\Users\GaRiS\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MainMenuForUsers.resources
+C:\Users\GaRiS\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Admins_Users.resources
+C:\Users\GaRiS\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Parcels_Users.resources
+C:\Users\GaRiS\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Warehouses_Users.resources
+C:\Users\GaRiS\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ParcelsAdd.resources
+C:\Users\GaRiS\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Parcels_Admins.resources
+C:\Users\GaRiS\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Warehouses_Admins.resources
+C:\Users\GaRiS\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\GaRiS\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Employees_Admins.resources
+C:\Users\GaRiS\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Orders_Admins.resources
+C:\Users\vovka\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\vovka\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Employees_Admins.resources
+C:\Users\vovka\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Orders_Admins.resources
+C:\Users\vovka\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ParcelsAdd.resources
+C:\Users\vovka\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Parcels_Admins.resources
+C:\Users\vovka\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Warehouses_Admins.resources
+C:\Users\vovka\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Admins_Users.resources
+C:\Users\vovka\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Authorization.resources
+C:\Users\vovka\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MainMenuForAdmins.resources
+C:\Users\vovka\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Parcels_Users.resources
+C:\Users\vovka\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MainMenuForUsers.resources
+C:\Users\vovka\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\vovka\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Registration.resources
+C:\Users\vovka\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Warehouses_Users.resources
+C:\Users\vovka\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\vovka\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\vovka\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\vovka\source\repos\Клиент\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
